@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagamox - White Label & Wholesale</title>
+    <style>
+        /* Inherit/Consistent Styles */
+        :root {
+            --primary-color: #4CAF50; 
+            --secondary-color: #388E3C; 
+            --dark-text: #333;
+            --light-text: #fff;
+            --bg-color: #f7f7f7; 
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-family); line-height: 1.6; color: var(--dark-text); background-color: var(--bg-color); }
+        .container { max-width: 1000px; margin: auto; padding: 0 20px; }
+        header { background: var(--dark-text); color: var(--light-text); padding: 0.8rem 0; border-bottom: 4px solid var(--primary-color); }
+        header .logo { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        footer { background: var(--dark-text); color: #b0b0b0; text-align: center; padding: 20px 0; margin-top: 40px; font-size: 0.9rem; }
+        footer a { color: var(--primary-color); text-decoration: none; }
+        
+        /* White Label Specific Styles */
+        .white-label-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1200/500?grayscale&blur=2') no-repeat center center/cover;
+            color: var(--light-text);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .white-label-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .benefits-section {
+            padding: 50px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        
+        .cta-form-section {
+            background-color: var(--light-text);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--light-text);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+            border: none;
+        }
+        .cta-button:hover { background: var(--secondary-color); }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .white-label-hero h1 { font-size: 2rem; }
+            .benefit-item { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">NAGAMOX</a>
+        </div>
+    </header>
+
+    <section class="white-label-hero">
+        <div class="container">
+            <h1>Partner with Nagamox: Your Brand, Our Quality</h1>
+            <p style="font-size: 1.3rem;">Unlock growth with premium white-label personal care products, ready for your market.</p>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">White Label Partnership Benefits</h2>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">📦</div>
+                <div>
+                    <h3>Ready-to-Ship Fulfillment</h3>
+                    <p>We handle all the production, packaging, and logistics. You simply focus on marketing and sales under your own brand name.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🌿</div>
+                <div>
+                    <h3>Natural & Certified Ingredients</h3>
+                    <p>Access our high-quality organic henna and cruelty-free makeup brush manufacturing line with full transparency.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">📈</div>
+                <div>
+                    <h3>Scalable Manufacturing</h3>
+                    <p>Start with low minimum order quantities and scale quickly as your business grows, with reliable supply chain support.</p>
+                </div>
+            </div>
+            
+            <div class="cta-form-section">
+                <h2>Start Your Partnership Today</h2>
+                <p>Fill out the form below to receive our detailed white-label catalog and pricing sheet.</p>
+                <a href="mailto:partner@nagamox.com?subject=White%20Label%20Inquiry" class="cta-button">Contact Our Wholesale Team</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <p>&copy; 2025 Nagamox. All rights reserved. | <a href="files.html">File Host Access</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
