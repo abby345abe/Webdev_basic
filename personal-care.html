@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagamox - Personal Care Collection</title>
+    <style>
+        /* Styles copied from index.html for consistency */
+        :root {
+            --primary-color: #A36B42;
+            --secondary-color: #8C5B39;
+            --dark-text: #212121;
+            --light-text: #fff;
+            --bg-light: #f5f3ef;
+            --bg-dark: #3A4750;
+            --font-family: 'Georgia', serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--bg-light);
+            overflow-x: hidden; 
+        }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+        /* Header & Footer Styles */
+        header { background: var(--bg-dark); color: var(--light-text); padding: 0.8rem 0; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header .logo { font-size: 1.5rem; letter-spacing: 2px; color: var(--light-text); text-decoration: none; font-weight: normal; }
+        .nav-link { color: var(--light-text); text-decoration: none; margin-left: 20px; font-size: 0.9rem; opacity: 0.8; transition: opacity 0.3s; }
+        .nav-link:hover { opacity: 1; }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--light-text);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover { background: var(--secondary-color); }
+        
+        footer {
+            background: var(--bg-dark);
+            color: #999;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.8rem;
+        }
+        footer a { color: var(--primary-color); text-decoration: none; }
+
+        /* --- Page Specific Styles --- */
+        .product-header {
+            text-align: center;
+            padding: 50px 0 30px;
+            background: var(--bg-light);
+        }
+        .product-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem); 
+        }
+
+        .product-grid {
+            display: grid;
+            /* 4 columns on desktop for the boutique product card look */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .product-item {
+            background: var(--light-text);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 250px; 
+            object-fit: contain; /* ensures mockups fit cleanly */
+            padding: 15px;
+            display: block;
+        }
+
+        .product-info {
+            padding: 20px 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: #777;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .product-info .price {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .white-label-banner {
+            background-color: var(--bg-dark);
+            color: var(--light-text);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">NAGAMOX</a>
+            <nav>
+                <a href="personal-care.html" class="nav-link">Personal Care</a>
+                <a href="white-label.html" class="nav-link">Wholesale</a>
+                <a href="files.html" class="nav-link">Files</a>
+                <a href="#" class="cta-button">Cta Main</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="product-header">
+        <div class="container">
+            <h1>Our Signature Personal Care Collection</h1>
+            <p style="font-size: 1.1rem; color: #555;">Discover the hand-curated essentials for a natural glow and effortless beauty routine.</p>
+        </div>
+    </section>
+
+    <section class="product-showcase">
+        <div class="container">
+            <div class="product-grid">
+
+                <div class="product-item">
+                    <img src="https://picsum.photos/id/175/300/300" alt="Glow Serum">
+                    <div class="product-info">
+                        <h3>Luminous Glow Serum</h3>
+                        <div class="price">$39.00</div>
+                        <p>Vitamin-rich serum for a radiant, all-day glow and smooth texture.</p>
+                        <a href="#" class="cta-button" style="padding: 8px 20px;">Add to Bag</a>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="https://picsum.photos/id/43/300/300" alt="Makeup Brush Set">
+                    <div class="product-info">
+                        <h3>Master Blend Brush Set</h3>
+                        <div class="price">$55.00</div>
+                        <p>Complete set of 12 professional, cruelty-free brushes for precision blending.</p>
+                        <a href="#" class="cta-button" style="padding: 8px 20px;">Add to Bag</a>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://picsum.photos/id/55/300/300" alt="Hydrating Face Mask">
+                    <div class="product-info">
+                        <h3>Deep Hydration Mask</h3>
+                        <div class="price">$28.00</div>
+                        <p>Infuses moisture deeply, leaving skin plump, soft, and refreshed after every use.</p>
+                        <a href="#" class="cta-button" style="padding: 8px 20px;">Add to Bag</a>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="https://picsum.photos/id/178/300/300" alt="Sculpting Brush">
+                    <div class="product-info">
+                        <h3>Precision Sculpting Brush</h3>
+                        <div class="price">$18.00</div>
+                        <p>The perfect angled brush for effortless contouring and highlighting.</p>
+                        <a href="#" class="cta-button" style="padding: 8px 20px;">Add to Bag</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section class="white-label-banner">
+        <div class="container">
+            <h2 style="margin-bottom: 15px; font-size: 2rem;">Private Label Opportunities</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 25px;">Sell these premium products under your own brand. Learn about our scalable white-label program.</p>
+            <a href="white-label.html" class="cta-button" style="padding: 15px 40px; border-radius: 50px;">Explore Wholesale</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <p>&copy; 2025 Nagamox. All rights reserved. | <a href="files.html">File Host Access</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
