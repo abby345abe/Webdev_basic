@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagamox - Future of Commerce</title>
+    <title>Nagamox - Experience Effortless Elegance</title>
+    <meta name="color-scheme" content="light dark"> 
+
     <style>
-        /* Basic Reset and Variables */
+        /* Variables & Reset - Adapted for Boutique Feel */
         :root {
-            --primary-color: #4CAF50; /* Nagamox Green */
-            --secondary-color: #388E3C; /* Darker Green */
-            --dark-text: #333;
+            --primary-color: #A36B42; /* Soft Brown/Bronze from button */
+            --secondary-color: #8C5B39; /* Darker Bronze */
+            --dark-text: #212121; /* Near-black for elegance */
             --light-text: #fff;
-            --bg-color: #f4f4f9;
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --bg-light: #f5f3ef; /* Off-white, warm background */
+            --bg-dark: #3A4750; /* Dark section background */
+            --font-family: 'Georgia', serif; /* Elegant serif font */
         }
 
         * {
@@ -25,52 +28,48 @@
             font-family: var(--font-family);
             line-height: 1.6;
             color: var(--dark-text);
-            background-color: var(--bg-color);
+            background-color: var(--bg-light);
+            overflow-x: hidden; 
         }
 
-        /* Container for Centering */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
             padding: 0 20px;
         }
 
-        /* Header & Navigation */
+        /* --- Header & Navigation --- */
         header {
-            background: var(--dark-text);
+            background: var(--bg-dark);
             color: var(--light-text);
-            padding: 1rem 0;
-            border-bottom: 5px solid var(--primary-color);
+            padding: 0.8rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* Hero Section (Main Banner) */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1200/600?grayscale') no-repeat center center/cover;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
             color: var(--light-text);
-            padding: 100px 0;
-            text-align: center;
+            text-decoration: none;
+            font-weight: normal;
         }
-
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        
+        .nav-link {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Call to Action Button */
+        .nav-link:hover { opacity: 1; }
+        
+        /* --- CTA Button Style --- */
         .cta-button {
             display: inline-block;
             background: var(--primary-color);
@@ -78,58 +77,149 @@
             padding: 12px 30px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
             transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
             background: var(--secondary-color);
         }
 
-        /* Features Section */
-        .features {
-            padding: 60px 0;
+        /* --- Hero Section (LCP Element) --- */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            background-color: #f0eae4; /* Light, neutral color from mockup */
+            padding: 50px 0 0;
+            min-height: 550px;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+        
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem); 
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            text-align: right;
+            padding-bottom: 50px;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            /* Placeholder: Use a high-quality, relevant image here */
+        }
+        
+        /* --- Feature Cards Section (Why Choose) --- */
+        .features-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--bg-light);
+        }
+
+        .features-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--light-text);
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
 
-        .feature-grid {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .feature-item {
-            flex: 1;
-            background: var(--light-text);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-item h3 {
-            color: var(--primary-color);
+        .feature-card h3 {
+            font-size: 1.1rem;
             margin-bottom: 10px;
         }
-
-        /* Footer */
-        footer {
-            background: var(--dark-text);
-            color: var(--light-text);
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+        
+        .feature-card p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .feature-grid {
-                flex-direction: column;
-            }
+        /* --- Products Section (The 'Product Card Products' Area) --- */
+        .products-section {
+            background-color: #DCDCDC; /* Darker/shadowed background area */
+            padding: 60px 0;
+        }
+        
+        .products-section h2 {
+            color: var(--dark-text);
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .product-link-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background: var(--dark-text);
+            color: var(--light-text);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
 
-            .hero h2 {
-                font-size: 2.5rem;
+        /* --- Footer --- */
+        footer {
+            background: var(--bg-dark);
+            color: #999;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+        }
+        footer a { color: var(--primary-color); text-decoration: none; }
+
+        /* --- Mobile Optimization --- */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                min-height: auto;
+                padding: 40px 0;
+            }
+            .hero-text {
+                padding-right: 0;
+                order: 2;
+            }
+            .hero-image {
+                order: 1;
+                margin-bottom: 30px;
+                text-align: center;
             }
         }
     </style>
@@ -138,40 +228,88 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">NAGAMOX</a>
+            <a href="index.html" class="logo">NAGAMOX</a>
+            <nav>
+                <a href="personal-care.html" class="nav-link">Personal Care</a>
+                <a href="white-label.html" class="nav-link">Wholesale</a>
+                <a href="files.html" class="nav-link">Files</a>
+                <a href="#" class="cta-button">Cta Main</a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>The Future of E-commerce is Here.</h2>
-            <p>Nagamox delivers cutting-edge products with unmatched reliability and speed.</p>
-            <a href="#products" class="cta-button">Explore Products</a>
+    <section class="hero-section">
+        <div class="container" style="display: flex; align-items: center;">
+            <div class="hero-text">
+                <h1>Experience Effortless Elegance with Nagamox.</h1>
+                <p>Discover hand-curated personal care essentials for a natural you.</p>
+                <a href="personal-care.html" class="cta-button">Explore Our Collection</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/400/500?face" alt="Nagamox Model" style="border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
         </div>
     </section>
 
-    <section id="products" class="features">
+    <section class="features-section">
         <div class="container">
-            <h2>Why Choose Nagamox?</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>Swift Delivery</h3>
-                    <p>Get your order faster than anyone else with our optimized logistics network.</p>
+            <h2>Why Choose Products?</h2>
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="icon">✔️</div>
+                    <h3>Natural Ingredients</h3>
+                    <p>Only the finest-sourced ingredients for gentle-yet effective results.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Quality Guaranteed</h3>
-                    <p>Every item is rigorously tested to meet the highest standards of quality.</p>
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h3>Artisan Quality</h3>
+                    <p>Hand-crafted, sustainable practices for profound beauty and healthy living.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>24/7 Support</h3>
-                    <p>Our dedicated support team is always available to help with any issue.</p>
+                <div class="feature-card">
+                    <div class="icon">🌱</div>
+                    <h3>Conscious Beauty</h3>
+                    <p>Cruelty-free, sustainable beauty for a mindful you and a happier planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 style="text-align: center;">Featured Personal Care</h2>
+            <div class="card-grid">
+                <div class="feature-card" style="box-shadow: none;">
+                    <img src="https://picsum.photos/id/175/300/300" alt="Product 1" style="width:100%; max-height:200px; object-fit: contain; border-radius: 5px;">
+                    <div style="padding: 15px 0 0;">
+                        <h3>Silk Hair Mask</h3>
+                        <p style="margin-bottom: 10px;">Deeply conditions and repairs for a smooth, reflective finish. Your hair's new essential.</p>
+                        <a href="personal-care.html" class="cta-button" style="background-color: #666; padding: 8px 20px;">Learn More</a>
+                    </div>
+                </div>
+                <div class="feature-card" style="box-shadow: none;">
+                    <img src="https://picsum.photos/id/43/300/300" alt="Product 2" style="width:100%; max-height:200px; object-fit: contain; border-radius: 5px;">
+                    <div style="padding: 15px 0 0;">
+                        <h3>Glow Serum</h3>
+                        <p style="margin-bottom: 10px;">Vibrant plant extracts for clear, luminous skin. Reduces fine lines and refreshes.</p>
+                        <a href="personal-care.html" class="cta-button" style="background-color: #666; padding: 8px 20px;">Learn More</a>
+                    </div>
+                </div>
+                <div class="feature-card" style="box-shadow: none;">
+                    <img src="https://picsum.photos/id/55/300/300" alt="Product 3" style="width:100%; max-height:200px; object-fit: contain; border-radius: 5px;">
+                    <div style="padding: 15px 0 0;">
+                        <h3>Sculpting Brush</h3>
+                        <p style="margin-bottom: 10px;">Ergonomic design for effortless makeup application. Define and blend like a professional.</p>
+                        <a href="personal-care.html" class="cta-button" style="background-color: #666; padding: 8px 20px;">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Nagamox. All rights reserved. | <a href="your-files.html" style="color: #fff; text-decoration: underline;">File Host Access</a></p>
+        <div class="container">
+             <p>&copy; 2025 Nagamox. All rights reserved. | <a href="files.html">File Host Access</a></p>
+        </div>
     </footer>
 
 </body>
